@@ -4,7 +4,10 @@ function hitungBahan(kategori) {
 
   const data = {
     makanan: {
-      mochi: ["Telor Ayam", 10],
+      mochi: [
+        ["Telor Ayam", 25], ["Buah-Buahan", 5], ["Sawit", 5], ["Beras", 5], 
+        ["Gula", 5], ["Zatkim", 1], ["Susu", 5], ["Akua", 5]
+        ],
       ramen: ["RamenX", 10],
       udon: ["UdonX", 10]
     },
