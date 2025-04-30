@@ -1,0 +1,134 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://cdn.discordapp.com/attachments/1062230797727313960/1342902174224482446/Grey_Clean_Japanese_Food_Menu_3.png?ex=6812559c&is=6811041c&hm=9cc45c83ef6cd5d8c11b3dbe5a7c3cfb1e45a3488bd2bd1cdf705c847c0cc2fd&') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Hero section */
+.hero {
+  position: relative; /* Tambahkan ini */
+  background-image: url("https://cdn.discordapp.com/attachments/1351814970328748084/1351815126998847581/MENU_KOI_EMPIRE.png?ex=681275b1&is=68112431&hm=5ef0cdbe2f57dec9e95c4da8e913b592bbdfdf6cfff8e53fda4e8cb8923978b4&");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* efek gelap */
+  z-index: 1;
+}
+
+.hero .content {
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Form layout */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.flex-row fieldset {
+  flex: 1 1 30%;
+  min-width: 260px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+}
+
+.flex-row legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.flex-row label {
+  display: block;
+  margin: 8px 0;
+}
+
+.flex-row input[type="number"] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+}
+
+.flex-row button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hasil */
+.hasil-bahan {
+  margin-top: 15px;
+}
+
+.card-bahan {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card-bahan h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.card-bahan ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.card-bahan li {
+  margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e0e0e0;
+  margin-top: 40px;
+  font-size: 0.95rem;
+  color: #333;
+  border-top: 2px solid #ccc;
+}
+
