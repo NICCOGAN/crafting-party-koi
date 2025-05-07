@@ -3,57 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Crafting-KOI</title>
+  <title>Crafting-KMZ-Garage</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="hero">
     <div class="content">
-      <h1>KOI (90% PROGRESS)</h1>
-      <p>RETREAT AND SPA</p>
+      <h1>⛩️KMZ - Garage⛩️</h1>
+      <p>⛩️KAMIKAZE GARAGE⛩️OPEN!. KAMI MELAYANI SERVICE, COSME, & RATA KANAN KENDARAAN (📌Koor. TERMINAL). ARIGATO✨</p>
     </div>
   </div>
 
   <form id="craftForm" class="flex-row">
-    <!-- Crafting Makanan -->
+    <!-- Makanan -->
     <fieldset>
-      <legend><strong>Crafting-Makan</strong></legend>
-      <label><input type="checkbox" name="craftingMakanan" value="mochi"> Mochi (50)</label><br>
-      <label><input type="checkbox" name="craftingMakanan" value="ramen"> Ramen (50)</label><br>
-      <label><input type="checkbox" name="craftingMakanan" value="udon"> Udon (50)</label><br>
-      <input type="number" id="jumlahMakanan" placeholder="Jumlah Paket" />
+      <legend><strong>Makanan</strong></legend>
+      <label><input type="checkbox" name="makanan" value="Mochi"> Mochi (x50)</label>
+      <input type="number" id="jumlahMochi" placeholder="Jumlah Paket" min="1" /><br>
+  
+      <label><input type="checkbox" name="makanan" value="Ramen"> Ramen (x50)</label>
+      <input type="number" id="jumlahRamen" placeholder="Jumlah Paket" min="1" /><br>
+  
+      <label><input type="checkbox" name="makanan" value="Udon"> Udon (x50)</label>
+      <input type="number" id="jumlahUdon" placeholder="Jumlah Paket" min="1" /><br>
+  
       <button type="button" onclick="hitungBahan('makanan')">Hitung Bahan</button>
       <div id="bahanMakanan" class="hasil-bahan"></div>
     </fieldset>
-
-    <!-- Crafting Minum -->
+  
+    <!-- Minuman -->
     <fieldset>
-      <legend><strong>Crafting-Minum</strong></legend>
-      <label><input type="checkbox" name="craftingMinum" value="iceOcha"> Ice Ocha (50)</label><br>
-      <label><input type="checkbox" name="craftingMinum" value="colacola"> Cola-Cola (50)</label><br>
-      <label><input type="checkbox" name="craftingMinum" value="redvelvet"> Red Velvet (50)</label><br>
-      <input type="number" id="jumlahMinum" placeholder="Jumlah Paket" />
-      <button type="button" onclick="hitungBahan('minum')">Hitung Bahan</button>
-      <div id="bahanMinum" class="hasil-bahan"></div>
+      <legend><strong>Minuman</strong></legend>
+      <label><input type="checkbox" name="minuman" value="IceOcha"> Ice Ocha (x50)</label>
+      <input type="number" id="jumlahIceOcha" placeholder="Jumlah Paket" min="1" /><br>
+  
+      <button type="button" onclick="hitungBahan('minuman')">Hitung Bahan</button>
+      <div id="bahanMinuman" class="hasil-bahan"></div>
     </fieldset>
-
-    <!-- Crafting Barang -->
+  
+    <!-- Barang -->
     <fieldset>
-      <legend><strong>Crafting-Barang</strong></legend>
-      <label><input type="checkbox" name="craftingBarang" value="hp"> HP (10)</label><br>
-      <label><input type="checkbox" name="craftingBarang" value="radio"> Radio (10)</label><br>
-      <label><input type="checkbox" name="craftingBarang" value="sake"> Sake (10)</label><br>
-      <label><input type="checkbox" name="craftingBarang" value="rokok"> Rokok Batang (12)</label><br>
-      <label><input type="checkbox" name="craftingBarang" value="rokokkoi"> Rokok Batang (10)</label><br>
-      <label><input type="checkbox" name="craftingBarang" value="korek"> Korek (10)</label><br>
-      <input type="number" id="jumlahBarang" placeholder="Jumlah Paket" />
+      <legend><strong>Barang</strong></legend>
+      <label><input type="checkbox" name="barang" value="RokokBatang"> Rokok Batang (x12)</label>
+      <input type="number" id="jumlahRokokBatang" placeholder="Jumlah Paket" min="1" /><br>
+  
+      <label><input type="checkbox" name="barang" value="RokokKoi7Star"> Rokok Koi 7Star (x10)</label>
+      <input type="number" id="jumlahRokokKoi7Star" placeholder="Jumlah Paket" min="1" /><br>
+  
+      <label><input type="checkbox" name="barang" value="Korek"> Korek (x10)</label>
+      <input type="number" id="jumlahKorek" placeholder="Jumlah Paket" min="1" /><br>
+  
       <button type="button" onclick="hitungBahan('barang')">Hitung Bahan</button>
       <div id="bahanBarang" class="hasil-bahan"></div>
     </fieldset>
-  </form>
+  </form>  
 
+ <!-- Tempat untuk menampilkan hasil perhitungan bahan -->
+ <div id="bahanMakanan" class="hasil-bahan"></div>
   <footer>
-    <p>Lastest Updated: 30/04/2025</p>
+    <p>Lastest Updated: 07/05/2025</p>
     <p>Credit by: PARTY KOI - WIMMPY N MORVINHO</p>
   </footer>
 
