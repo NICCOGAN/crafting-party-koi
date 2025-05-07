@@ -1,4 +1,3 @@
-/* Reset dasar */
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +7,9 @@
   body, html {
     font-family: 'Segoe UI', sans-serif;
     background: url('https://cdn.discordapp.com/attachments/1258274662023172157/1369578869941731389/Grey_Clean_Japanese_Food_Menu_3.png?ex=681c5f38&is=681b0db8&hm=2f66e8ccef36803de344caee351c38a91aff4b493cfa0229c5ed0c4f2d873e66&') no-repeat center center fixed;
-    background-size: 50%;  /* Mengubah gambar menjadi setengah ukuran asli */
+    background-size: 50%;
 }
 
-  
-  /* Hero section */
   .hero {
     position: relative;
     background-image: url("https://cdn.discordapp.com/attachments/1258274662023172157/1369578861070651412/MENU_KOI_EMPIRE.png?ex=681c5f36&is=681b0db6&hm=ad4ddb82563818774417f589ddc34856650fe57fe239dd91dc4c43ae963eea1a&");
@@ -28,7 +25,7 @@
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* efek gelap */
+    background-color: rgba(0, 0, 0, 0.4); 
     z-index: 1;
   }
   
@@ -46,20 +43,19 @@
     font-size: 1.2rem;
   }
   
-  /* Form layout */
   .flex-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Mengurangi jarak antar elemen */
+    gap: 15px; 
     justify-content: space-between;
-    padding: 15px; /* Mengurangi padding untuk lebih rapat */
+    padding: 15px; 
   }
   
   .flex-row fieldset {
     flex: 1 1 30%;
     min-width: 260px;
-    padding: 12px; /* Mengurangi padding dalam fieldset */
-    border-radius: 8px; /* Sedikit lebih kecil radius border */
+    padding: 12px; 
+    border-radius: 8px; 
     border: 2px solid #ccc;
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -67,27 +63,27 @@
   
   .flex-row legend {
     font-weight: bold;
-    margin-bottom: 8px; /* Mengurangi jarak margin bawah pada legend */
+    margin-bottom: 8px; 
   }
   
   .flex-row label {
     display: block;
-    margin: 6px 0; /* Mengurangi margin antara label */
-    font-size: 0.95rem; /* Menurunkan ukuran font untuk lebih rapat */
+    margin: 6px 0; 
+    font-size: 0.95rem; 
   }
   
   .flex-row input[type="number"] {
     width: 100%;
-    margin-top: 8px; /* Mengurangi jarak atas pada input */
-    padding: 6px; /* Menurunkan padding dalam input */
+    margin-top: 8px; 
+    padding: 6px; 
     border-radius: 5px;
     border: 1px solid #bbb;
     font-size: 0.95rem;
   }
   
   .flex-row button {
-    margin-top: 8px; /* Mengurangi jarak atas button */
-    padding: 6px 10px; /* Mengurangi padding button */
+    margin-top: 8px; 
+    padding: 6px 10px; 
     background-color: #4caf50;
     color: white;
     border: none;
@@ -100,10 +96,9 @@
     background-color: #45a049;
   }
   
-  /* Hasil */
   .hasil-bahan {
-    margin-top: 12px; /* Mengurangi margin atas hasil */
-    padding: 8px; /* Mengurangi padding dalam hasil */
+    margin-top: 12px; 
+    padding: 8px; 
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -113,14 +108,14 @@
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 12px; /* Mengurangi padding dalam card */
-    margin-bottom: 12px; /* Mengurangi margin bawah card */
+    padding: 12px; 
+    margin-bottom: 12px; 
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
   
   .card-bahan h4 {
-    margin-bottom: 8px; /* Mengurangi margin bawah judul card */
-    font-size: 1rem; /* Mengurangi ukuran font */
+    margin-bottom: 8px; 
+    font-size: 1rem; 
     color: #333;
   }
   
@@ -130,21 +125,19 @@
   }
   
   .card-bahan li {
-    margin-bottom: 4px; /* Mengurangi margin antar list item */
+    margin-bottom: 4px; 
   }
   
-  /* Footer */
   footer {
     text-align: center;
-    padding: 15px; /* Mengurangi padding footer */
+    padding: 15px; 
     background-color: #e0e0e0;
     margin-top: 30px;
-    font-size: 0.9rem; /* Mengurangi ukuran font footer */
+    font-size: 0.9rem; 
     color: #333;
     border-top: 2px solid #ccc;
   }
   
-  /* Responsiveness */
   @media (max-width: 768px) {
     .flex-row {
       flex-direction: column;
