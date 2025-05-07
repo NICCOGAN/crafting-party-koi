@@ -7,7 +7,7 @@
   
   body, html {
     font-family: 'Segoe UI', sans-serif;
-    background: url('https://cdn.discordapp.com/attachments/1310632320000196678/1354026595626516480/image.png?ex=68153b48&is=6813e9c8&hm=e44e6a6af54dd40bd6621766c2761924dd40d4dfcc328e52f488f13698095ef6&') no-repeat center center fixed;
+    background: url('https://cdn.discordapp.com/attachments/1258274662023172157/1369578869941731389/Grey_Clean_Japanese_Food_Menu_3.png?ex=681c5f38&is=681b0db8&hm=2f66e8ccef36803de344caee351c38a91aff4b493cfa0229c5ed0c4f2d873e66&') no-repeat center center fixed;
     background-size: 50%;  /* Mengubah gambar menjadi setengah ukuran asli */
 }
 
@@ -15,7 +15,7 @@
   /* Hero section */
   .hero {
     position: relative;
-    background-image: url("https://cdn.discordapp.com/attachments/1310632320000196678/1351478390170980454/image.png?ex=68153095&is=6813df15&hm=f9f05b8df3d50e13c7c66ab1be461a1ad50dbbd9cc84e40620f22b266f4d0df4&");
+    background-image: url("https://cdn.discordapp.com/attachments/1258274662023172157/1369578861070651412/MENU_KOI_EMPIRE.png?ex=681c5f36&is=681b0db6&hm=ad4ddb82563818774417f589ddc34856650fe57fe239dd91dc4c43ae963eea1a&");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
