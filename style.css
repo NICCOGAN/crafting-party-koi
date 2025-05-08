@@ -146,7 +146,7 @@
   
     .flex-row fieldset {
       width: 100%;
-      margin-bottom: 15px; /* Mengurangi margin bawah pada fieldset */
+      margin-bottom: 15px;
     }
   }
   
