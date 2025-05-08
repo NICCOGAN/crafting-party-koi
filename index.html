@@ -7,14 +7,26 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#crafting-party">🛠️ Crafting-KOI</a></li>
+      <li><a href="#iklan-koi">📢 Iklan-KOI</a></li>
+      <li><a href="#harga-koi">💰 Harga-KOI</a></li>
+    </ul>
+  </nav>
+   
   <div class="hero">
     <div class="content">
-      <h1>🍻 KOI - RETREAT And SPA🍻</h1>
-      <p><strong>HAJIMEMASHITE~! こんにちは~! KOI (Retreat and Spa) READY dan sudah dibuka. Kamu stres? pusing? Kami menyediakan Rokok & Miras khas Jepang lohh!!🚬🍸, Kami juga ada Makan dan Minum 🍛🥤, Alkom 📱, Megaphone🗣️. Coba rasain sendiri miras khas jepang🍻  Cussss langsung ke 1003 (Garasi L), ありがとうございました~ ✨ </strong></p>
+      <h1>🍻 KOI - RETREAT And SPA 🍻</h1>
+      <p><strong>HAJIMEMASHITE~! こんにちは~! KOI (Retreat and Spa) READY dan sudah dibuka. Kami menyediakan Rokok & Miras khas Jepang lohh!!🚬🍸, Kami juga ada Makan dan Minum 🍛🥤. Cussss langsung ke 1003 (Garasi L), ありがとうございました~ ✨</strong></p>
     </div>
   </div>
 
-  <form id="craftForm" class="flex-row">
+  <!-- SECTION 1: Crafting Party -->
+  <div id="crafting-party" class="section">
+  <section id="crafting-party">
+    <h2>🛠️Crafting - KOI</h2>
+    <form id="crafting-party" class="flex-row">
     <!-- Makanan -->
     <fieldset>
       <legend><strong>Makanan</strong></legend>
@@ -60,6 +72,59 @@
       <div id="bahanBarang" class="hasil-bahan"></div>
     </fieldset>
   </form>  
+</div>
+<div id="iklan-koi" class="section" style="display: none;">
+  <section id="iklan-koi" class="section-text">
+    <div id="iklan-koi" class="content" style="padding: 20px;">
+      <h2>📢Iklan - KOI</h2>
+      <p><strong>Iklan - PAGI/SIANG/SORE</strong></p>
+      <p>Konnichiwa~! こんにちは~! KOI (Retreat and Spa) sudah dibuka. Kamu stres? pusing? Kami menyediakan Rokok & Miras khas Jepang lohh!!🚬🍸, Kami juga ada Makan dan Minum 🍛🥤, Alkom 📱, Megaphone🗣️. Coba rasain sendiri miras khas jepang🍻  Cussss langsung ke 1003 (Garasi L), ありがとうございました~ ✨</p>
+      <br><p><strong>Iklan - MALAM</strong></p>
+      <p>Konbanwa~! こんばんは~! KOI (Retreat and Spa) sudah dibuka. Kamu stres? pusing? Kami menyediakan Rokok & Miras khas Jepang lohh!!🚬🍸, Kami juga ada Makan dan Minum 🍛🥤, Alkom 📱, Megaphone🗣️. Coba rasain sendiri miras khas jepang🍻  Cussss langsung ke 1003 (Garasi L), ありがとうございました~ ✨</p>
+      <br><p><strong>Iklan - CLOSING</strong></p>
+      <p>Arigatō 🧙‍♀️ KOI (Retreat and Spa) tutup beberapa saat dulu yaaaa!! Terima kasih banyak sudah berkunjung. ありがとうございました~ Sayonara 👋 ✨</p>
+      <br>
+      <br>
+      <p><strong>NOTE: TULIS IKLAN PAKAI T JANGAN F8 YAA!!!</strong></p>
+    </div></div>
+  </section>
+  <div id="harga-koi" class="section" style="display: none;">
+  <section id="harga-koi" class="section-text">
+    <div id="harga-koi" class="content" style="padding: 20px;">
+      <h2>💰Harga - KOI</h2>
+      <div class="harga-grid">
+        <div class="kolom">
+          <h3><strong>Harga - Makan+Minum</strong></h3>
+          <p>1 PAKET = 28.000</p>
+          <p>2 PAKET = 53.000</p>
+          <p>5 PAKET = 128.000</p>
+          <p>10 PAKET = 228.000</p>
+          <p>20 PAKET = 456.000</p>
+        </div>
+        <div class="kolom">
+          <h3><strong>Harga - Item</strong></h3>
+          <p>Rokok = 9.500</p>
+          <p>Korek = 9.500</p>
+          <p>Susu = 850</p>
+          <p>Radio = 15.000</p>
+          <p>HP = 10.000</p>
+          <p>Chip = 100.000 / 1000 CHIP</p>
+          <p>TOA = 25.000</p>
+          <p>FIREWORK = 17.000</p>
+          <p>BOOMBOOX = 15.000</p>
+          <p>MAWAR = 12.000</p>
+          <p>Minuman alkohol = 15.000</p>
+        </div>
+        <div class="kolom">
+          <h3><strong>Harga - Paket Item</strong></h3>
+          <p>2 Rokok + 1 Korek (1 paket) = 26.000</p>
+          <p>1 HP + 1 Radio (1 paket) = 25.000</p>
+          <p>1 Sake + 15 Susu = 20.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
  <!-- Tempat untuk menampilkan hasil perhitungan bahan -->
  <div id="bahanMakanan" class="hasil-bahan"></div>
@@ -67,7 +132,21 @@
     <p>Lastest Updated: 08/05/2025</p>
     <p>Credit by: PARTY KOI - WIMMPY N MORVINHO</p>
   </footer>
-
   <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        
+        const targetId = this.getAttribute('href').substring(1); 
+        const sections = document.querySelectorAll('.section');
+  
+        sections.forEach(sec => sec.style.display = 'none');
+  
+        document.getElementById(targetId).style.display = 'block';
+      });
+    });
+    document.getElementById('crafting-party').style.display = 'block';
+  </script>  
 </body>
 </html>
