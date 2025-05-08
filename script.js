@@ -67,3 +67,5 @@ function hitungBahan(kategori) {
     }
   });
 }
+document.querySelectorAll('.navbar a').forEach(a => a.classList.remove('active'));
+this.classList.add('active');
