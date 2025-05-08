@@ -1,152 +1,237 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    font-family: 'Segoe UI', sans-serif;
-    background: url('https://cdn.discordapp.com/attachments/1258274662023172157/1369578869941731389/Grey_Clean_Japanese_Food_Menu_3.png?ex=681c5f38&is=681b0db8&hm=2f66e8ccef36803de344caee351c38a91aff4b493cfa0229c5ed0c4f2d873e66&') no-repeat center center fixed;
-    background-size: 50%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-  .hero {
-    position: relative;
-    background-image: url("https://cdn.discordapp.com/attachments/1258274662023172157/1369578861070651412/MENU_KOI_EMPIRE.png?ex=681c5f36&is=681b0db6&hm=ad4ddb82563818774417f589ddc34856650fe57fe239dd91dc4c43ae963eea1a&");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 120px 20px;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); 
-    z-index: 1;
-  }
-  
-  .hero .content {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-  }
-  
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://cdn.discordapp.com/attachments/1258274662023172157/1369578869941731389/Grey_Clean_Japanese_Food_Menu_3.png?ex=681c5f38&is=681b0db8&hm=2f66e8ccef36803de344caee351c38a91aff4b493cfa0229c5ed0c4f2d873e66&') no-repeat center center fixed;
+  background-size: 50%;
+}
+
+.hero {
+  position: relative;
+  background-image: url("https://cdn.discordapp.com/attachments/1258274662023172157/1369578861070651412/MENU_KOI_EMPIRE.png?ex=681c5f36&is=681b0db6&hm=ad4ddb82563818774417f589ddc34856650fe57fe239dd91dc4c43ae963eea1a&");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: 1;
+}
+
+.hero .content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; 
+  justify-content: space-between;
+  padding: 15px; 
+}
+
+.flex-row fieldset {
+  flex: 1 1 30%;
+  min-width: 260px;
+  padding: 12px; 
+  border-radius: 8px; 
+  border: 2px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flex-row legend {
+  font-weight: bold;
+  margin-bottom: 8px; 
+}
+
+.flex-row label {
+  display: block;
+  margin: 6px 0; 
+  font-size: 0.95rem; 
+}
+
+.flex-row input[type="number"] {
+  width: 100%;
+  margin-top: 8px; 
+  padding: 6px; 
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  font-size: 0.95rem;
+}
+
+.flex-row button {
+  margin-top: 8px; 
+  padding: 6px 10px; 
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.flex-row button:hover {
+  background-color: #45a049;
+}
+
+.hasil-bahan {
+  margin-top: 12px; 
+  padding: 8px; 
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.card-bahan {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px; 
+  margin-bottom: 12px; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card-bahan h4 {
+  margin-bottom: 8px; 
+  font-size: 1rem; 
+  color: #333;
+}
+
+.card-bahan ul {
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.card-bahan li {
+  margin-bottom: 4px; 
+}
+
+footer {
+  text-align: center;
+  padding: 15px; 
+  background-color: #e0e0e0;
+  margin-top: 30px;
+  font-size: 0.9rem; 
+  color: #333;
+  border-top: 2px solid #ccc;
+}
+
+@media (max-width: 768px) {
   .flex-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px; 
-    justify-content: space-between;
-    padding: 15px; 
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .flex-row fieldset {
-    flex: 1 1 30%;
-    min-width: 260px;
-    padding: 12px; 
-    border-radius: 8px; 
-    border: 2px solid #ccc;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .flex-row legend {
-    font-weight: bold;
-    margin-bottom: 8px; 
-  }
-  
-  .flex-row label {
-    display: block;
-    margin: 6px 0; 
-    font-size: 0.95rem; 
-  }
-  
-  .flex-row input[type="number"] {
     width: 100%;
-    margin-top: 8px; 
-    padding: 6px; 
-    border-radius: 5px;
-    border: 1px solid #bbb;
-    font-size: 0.95rem;
+    margin-bottom: 15px; /* Mengurangi margin bawah pada fieldset */
   }
-  
-  .flex-row button {
-    margin-top: 8px; 
-    padding: 6px 10px; 
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.95rem;
-  }
-  
-  .flex-row button:hover {
-    background-color: #45a049;
-  }
-  
-  .hasil-bahan {
-    margin-top: 12px; 
-    padding: 8px; 
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .card-bahan {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 12px; 
-    margin-bottom: 12px; 
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  
-  .card-bahan h4 {
-    margin-bottom: 8px; 
-    font-size: 1rem; 
-    color: #333;
-  }
-  
-  .card-bahan ul {
-    padding-left: 18px;
-    list-style-type: disc;
-  }
-  
-  .card-bahan li {
-    margin-bottom: 4px; 
-  }
-  
-  footer {
-    text-align: center;
-    padding: 15px; 
-    background-color: #e0e0e0;
-    margin-top: 30px;
-    font-size: 0.9rem; 
-    color: #333;
-    border-top: 2px solid #ccc;
-  }
-  
-  @media (max-width: 768px) {
-    .flex-row {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .flex-row fieldset {
-      width: 100%;
-      margin-bottom: 15px;
-    }
-  }
-  
+}
+
+section {
+  margin: 40px 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.section-text p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+.navbar {
+  background: linear-gradient(90deg, #f5e0c3 0%, #ffe9c6 100%);
+  padding: 12px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-bottom: 2px solid #c4a484;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: #5e3c23;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #b35c00;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar a.active {
+  border-bottom: 2px solid #b35c00;
+}
+
+.harga-grid {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.harga-grid .kolom {
+  flex: 1;
+  min-width: 200px;
+}
+
+.harga-grid h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.harga-grid p {
+  margin: 4px 0;
+}
