@@ -28,6 +28,12 @@ function hitungBahan(kategori) {
     },
     SakeSobaCha: {
       Bambu: 10, Botol: 10, Sawit: 5, Kecubung: 7, Micin: 7, Beras: 3, Cengkeh: 5, Buahbuahan: 10
+    },
+    HP: {
+      Tembaga: 25, Glass: 75, Steel: 25, Besi: 25, Plastic: 100, AluminiumPowder: 100
+    },
+    Radio: {
+      Tembaga: 10, IronPowder: 50, Emas: 10, Aluminium: 10, Rubber: 25, Steel: 10, Plastic: 25
     }
   };
 
@@ -54,7 +60,7 @@ function hitungBahan(kategori) {
       const resultCard = document.createElement("div");
       resultCard.className = "card-bahan";
 
-      let html = `<h4>${item.replace(/([A-Z])/g, ' $1')} x${jumlah * (item === "RokokBatang" ? 12 : item === "RokokKoi7Star" ? 10 : item === "SakeSobaCha" ? 10 : item === "Korek" ? 10 : 50)}:</h4><ul>`;
+      let html = `<h4>${item.replace(/([A-Z])/g, ' $1')} x${jumlah * (item === "RokokBatang" ? 12 : item === "RokokKoi7Star" ? 10 : item === "SakeSobaCha" ? 10 : item === "Korek" ? 10 : item === "HP" ? 5 : item === "Radio" ? 5 : 50)}:</h4><ul>`;
       for (const bahanNama in bahan) {
         const total = bahan[bahanNama] * jumlah;
         if (total > 0) {
