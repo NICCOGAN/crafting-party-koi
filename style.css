@@ -12,7 +12,7 @@ body, html {
 
 .hero {
   position: relative;
-  background-image: url("https://cdn.discordapp.com/attachments/1258274662023172157/1369578861070651412/MENU_KOI_EMPIRE.png?ex=681c5f36&is=681b0db6&hm=ad4ddb82563818774417f589ddc34856650fe57fe239dd91dc4c43ae963eea1a&");
+  background-image: url('https://raw.githubusercontent.com/NICCOGAN/crafting-party-koi/root/1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
