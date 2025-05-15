@@ -1,3 +1,41 @@
+function copyTotalGlobal() {
+  let textToCopy = "Total Semua Bahan:\n";
+
+  for (const namaBahan in totalGlobalBahan) {
+    const namaFormat = namaBahan.replace(/([A-Z])/g, " $1");
+    textToCopy += `${namaFormat}: ${totalGlobalBahan[namaBahan]}\n`;
+  }
+
+  navigator.clipboard.writeText(textToCopy)
+    .then(() => {
+      alert("Total bahan berhasil disalin ke clipboard!");
+    })
+    .catch(err => {
+      alert("Gagal menyalin: " + err);
+    });
+}
+
+const totalGlobalBahan = {};
+function updateTotalGlobal(bahan, jumlah) {
+  for (const namaBahan in bahan) {
+    if (!totalGlobalBahan[namaBahan]) {
+      totalGlobalBahan[namaBahan] = 0;
+    }
+    totalGlobalBahan[namaBahan] += bahan[namaBahan] * jumlah;
+  }
+}
+
+function tampilkanTotalGlobal() {
+  const globalDiv = document.getElementById("totalGlobal");
+  globalDiv.innerHTML = "<h3>Total Semua Bahan:</h3><ul>";
+
+  for (const namaBahan in totalGlobalBahan) {
+    const namaFormat = namaBahan.replace(/([A-Z])/g, " $1");
+    globalDiv.innerHTML += `<li>${namaFormat}: ${totalGlobalBahan[namaBahan]}</li>`;
+  }
+
+  globalDiv.innerHTML += "</ul>";
+}
 
 function hitungBahan(kategori) {
   const resep = {
@@ -43,6 +81,15 @@ function hitungBahan(kategori) {
     barang: "bahanBarang"
   };
 
+  const paketJumlah = {
+    RokokBatang: 12,
+    RokokKoi7Star: 10,
+    SakeSobaCha: 10,
+    Korek: 10,
+    HP: 5,
+    Radio: 5
+  };
+
   const outputDiv = document.getElementById(kategoriOutput[kategori]);
   outputDiv.innerHTML = "";
 
@@ -60,18 +107,21 @@ function hitungBahan(kategori) {
       const resultCard = document.createElement("div");
       resultCard.className = "card-bahan";
 
-      let html = `<h4>${item.replace(/([A-Z])/g, ' $1')} x${jumlah * (item === "RokokBatang" ? 12 : item === "RokokKoi7Star" ? 10 : item === "SakeSobaCha" ? 10 : item === "Korek" ? 10 : item === "HP" ? 5 : item === "Radio" ? 5 : 50)}:</h4><ul>`;
+      const totalPaket = jumlah * (paketJumlah[item] || 50);
+
+      let html = `<h4>${item.replace(/([A-Z])/g, ' $1')} x${totalPaket}:</h4><ul>`;
       for (const bahanNama in bahan) {
         const total = bahan[bahanNama] * jumlah;
-        if (total > 0) {
-          html += `<li>${bahanNama.replace(/([A-Z])/g, ' $1')}: ${total} pcs</li>`;
-        }
+        html += `<li>${bahanNama.replace(/([A-Z])/g, ' $1')}: ${total}</li>`;
       }
       html += `</ul>`;
       resultCard.innerHTML = html;
       outputDiv.appendChild(resultCard);
+
+      updateTotalGlobal(bahan, jumlah);
     }
   });
+
+  tampilkanTotalGlobal();
+  
 }
-document.querySelectorAll('.navbar a').forEach(a => a.classList.remove('active'));
-this.classList.add('active');
