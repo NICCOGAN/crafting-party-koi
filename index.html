@@ -77,6 +77,9 @@
       <button type="button" onclick="hitungBahan('barang')">Hitung Bahan</button>
       <div id="bahanBarang" class="hasil-bahan"></div>
     </fieldset>
+    <button onclick="copyTotalGlobal()">Copy Total Bahan</button>
+    <div id="totalGlobal"></div>
+    <button onclick="resetTotalGlobal(); document.getElementById('bahanTotalSemua').innerHTML = '';">Reset Semua Bahan</button>
   </form>  
 </div>
 <div id="iklan-koi" class="section" style="display: none;">
@@ -132,10 +135,9 @@
   </section>
 </div>
 
- <!-- Tempat untuk menampilkan hasil perhitungan bahan -->
  <div id="bahanMakanan" class="hasil-bahan"></div>
   <footer>
-    <p>Lastest Updated: 09/05/2025</p>
+    <p>Lastest Updated: 15/05/2025</p>
     <p>Credit by: PARTY KOI - WIMMPY N MORVINHO</p>
   </footer>
   <script src="script.js"></script>
